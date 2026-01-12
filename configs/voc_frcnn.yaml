@@ -1,0 +1,22 @@
+seed: 42
+device: auto
+
+dataset:
+  root: C:/Users/Wizard/Documents/Object_Detect/PASCAL_VOC/VOC2012_train_val/VOC2012_train_val
+  classes: ["person", "car", "dog", "bicycle"]
+  train_split: train
+
+
+
+training:
+  epochs: 40
+  batch_size: 2
+  lr: 0.005
+  momentum: 0.9
+  weight_decay: 0.0005
+  checkpoint_dir: checkpoints/
+
+model:
+  num_classes: 5   # background + 4 classes
+  anchor_sizes: [32, 64, 128, 256, 512]
+  aspect_ratios: [0.5, 1.0, 2.0]
